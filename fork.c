@@ -11,7 +11,8 @@ int main()
     pid = fork();
     pid = fork();
 
-
+    printf("pid %d\n", getpid());
+    
     if (pid < 0) {
         printf (stderr, "Fork Failed");
         return 1;
@@ -24,6 +25,5 @@ int main()
         wait(NULL);
         printf("Child Complete");
     }
-printf(getpid());
     return 0;
 }
