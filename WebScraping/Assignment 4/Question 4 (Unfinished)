@@ -11,7 +11,11 @@
 
 $(document).ready(function(){  
     alert("Modify the code to complete the assignment");
-       $("h1").css("color", "red"); <!-- This code changes the header color, pretty easy but took me way to long to do. I'd rather NOT talk about it -->
+       $("h1").css("color", "red"); <!-- This Changes h1 color to red, pretty easy to do but too me WAY to long. I do NOT wanna talk about it. -->
+  $("url").mouseenter(function(event){
+      $(this).css("");
+  }
+                             
 }); 
   
   
@@ -26,7 +30,7 @@ $(document).ready(function(){
     <li> <a href = "http://www.piazza.com">Piazza</a></li>
 </ul>
 
-<div id = "url" style = "border: solid 1px red; display:none">
+<div id = "url" style = "border: solid 1px red; display:block">
 
 </div>
 </body>
