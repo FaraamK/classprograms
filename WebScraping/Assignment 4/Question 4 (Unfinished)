@@ -15,17 +15,18 @@ const hiddenDiv = document.getElementById("url");
   
   
 $(document).ready(function(){  
-    //alert("Modify the code to complete the assignment");
-       $("h1").css("color", "red"); <!-- This Changes h1 color to red,sadly took to long to do -->
+    alert("Modify the code to complete the assignment");
+       $("h1").css("color", "red"); <!-- This Changes h1 color to red,sadly took to long to do. I don't wanna talk about it. -->
   
   $("a").mouseenter(function(event){
-    $(this).css("background-color", "blue");
-    var get = $(this).text();
-    $(".url").css("border","solid 1px blue");
+    var get = $(this).attr("href");
+    $(this).css("background-color","");
+    $(".url").css("border","solid 1px");
     $("#url").text(get);
+    $("#url").css("display","block");
   });
   $("a").mouseleave(function(){
-    $(this).css("background-color", "lightgray")
+    $("#url").css("display","none");
   });
   
 }); 
