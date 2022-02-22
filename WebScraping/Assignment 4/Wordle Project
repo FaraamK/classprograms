@@ -37,14 +37,44 @@
           background-color: #787c7e;
         }
         
-          
-      </style>
+        a.wordle:hover, a.wordle:active {font-size: 110%;}
+        
+  .navbar {
+  overflow: hidden;
+  background-color: #333;
+}
 
-       
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.wordle{
+  background-color: #04AA6D;
+  color: white;
+}
+        .navbar a.darkmode{
+  background-color: #04AA6D;
+  color: white;
+}
+        
+      </style>
     </head>
 
     <body>
-      
+      <div class = "navbar">
+        <a class = "Wordlenav" href = "">Wordle</a>
+        <a class = "darkmode" href = "">Dark Mode</a>
+      </div>
       
         
       <div class = "container m-5">
@@ -56,12 +86,13 @@
           <li id = "rule2">The Letter is in The <span class = "wrong"> WRONG Position</span></li>
           <li id = "rule3">The Letter is <span class = "not">NOT in The Word</span></li>
         </ul>
-<p>Guesses do not need to be real words, but need to be five letters. For more fun, go to <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a></p>
+<p>Guesses do not need to be real words, but need to be five letters. For more fun, go to <a class = "wordle" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a></p>
   <input type="text" id="Letter1" name="Letter1" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter2" name="Letter2" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter3" name="Letter3" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter4" name="Letter4" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter5" name="Letter5" maxlength="1" style="text-transform:uppercase">
+  <input type="submit" value="Submit">
         
         
         <form onsubmit = "return false;">
