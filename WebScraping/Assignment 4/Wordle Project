@@ -26,6 +26,17 @@
           border-radius: 4px;
           border: 2px: solid gray;
         }
+        
+        .correct {
+          background-color: #6aaa64;
+        }
+        .wrong {
+          background-color:#c9b458;
+        }
+        .not{
+          background-color: #787c7e;
+        }
+        
           
       </style>
 
@@ -41,11 +52,11 @@
           <h1> Wordle Project </h1>
         <p> <b>Rules:</b> Guess the five letter word. After submitting a guess, the characters will be color coded as below. </p>
         <ul>
-          <li>The Letter is in The CORRECT Position</li>
-          <li>The Letter is in The WRONG Position</li>
-          <li>The Letter is NOT in The Word</li>
+          <li id = "rule1">The Letter is in The <span class = "correct"> CORRECT  Position </span> </li>
+          <li id = "rule2">The Letter is in The <span class = "wrong"> WRONG Position</span></li>
+          <li id = "rule3">The Letter is <span class = "not">NOT in The Word</span></li>
         </ul>
-
+<p>Guesses do not need to be real words, but need to be five letters. For more fun, go to <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a></p>
   <input type="text" id="Letter1" name="Letter1" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter2" name="Letter2" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter3" name="Letter3" maxlength="1" style="text-transform:uppercase">
@@ -63,14 +74,7 @@
       "use script";
           
         const ANSWER = 'FANCY';
-        
-        /*const words = ["Volvo", "Array", "Alloy", "Rugby", "Norse", "Unity", "Burst", 
-                       "Asset", "Fancy", "Taunt", "Adieu", "Irate", "Linux", "Irish", 
-                       "Cache", "Pupil", "Siege", "Query", "Proxy", "Opera", "Whiff", 
-                       "Vinyl", "Twixt", "Theta", "Cabal", "Admin", "Belch", "Shred", 
-                       "Beach", "Slump". "Flash", "Trick"]*/
-        //Due to an unknown error, I will NOT be adding an array of words to select, God did not answer my prayers 
-        //(Array would cause keyboard to disappear, not sure why)
+      
        
         // displays "keys" for each character in the keys string
         function writeKeys(keys) {
@@ -86,6 +90,7 @@
         }     
     
   
+        
         document.write('<div class = "container keys m-5">');
   
   
@@ -97,6 +102,11 @@
   
 
         </script>
+      <script>
+      $(document).ready(function(){  
+        $(".keyboard-button").click(function()
+    });
+      </script>
 
   
     </body>
