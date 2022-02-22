@@ -39,13 +39,16 @@
         
         a.wordle:hover, a.wordle:active {font-size: 110%;}
         
-  .navbar {
+ 
+.topnav {
+  background-color: black;
   overflow: hidden;
-  background-color: #333;
 }
 
-.navbar a {
+
+.topnav a {
   float: left;
+  display: block;
   color: #f2f2f2;
   text-align: center;
   padding: 14px 16px;
@@ -53,28 +56,38 @@
   font-size: 17px;
 }
 
-.navbar a:hover {
+
+.topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-.navbar a.wordle{
-  background-color: #04AA6D;
+
+.topnav a.active {
+  background-color: black;
   color: white;
 }
-        .navbar a.darkmode{
-  background-color: #04AA6D;
-  color: white;
-}
+
+
+.topnav .icon {
+  display: none;
+} 
+        .dark-mode{
+          background-color: #202020;
+          color: white;
+        }
         
       </style>
     </head>
 
     <body>
-      <div class = "navbar">
-        <a class = "Wordlenav" href = "">Wordle</a>
-        <a class = "darkmode" href = "">Dark Mode</a>
-      </div>
+      <div class="topnav" id="myTopnav">
+  <a href="">Wordle</a>
+  <a href onclick="myFunction()">Dark Mode </a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
       
         
       <div class = "container m-5">
@@ -92,11 +105,14 @@
   <input type="text" id="Letter3" name="Letter3" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter4" name="Letter4" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter5" name="Letter5" maxlength="1" style="text-transform:uppercase">
-  <input type="submit" value="Submit">
+        <br>
+
         
         
         <form onsubmit = "return false;">
-                  
+  <input type="submit" value="Submit">
+  <input type ="reset" value = "Reset">
+        
         </form>
   
       </div>
@@ -130,6 +146,11 @@
         writeKeys('ZXCVBNM');
   
         document.write('</div>');
+        
+        function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+} 
   
 
         </script>
@@ -138,6 +159,8 @@
         $(".keyboard-button").click(function()
     });
       </script>
+      
+      
 
   
     </body>
