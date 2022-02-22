@@ -73,7 +73,7 @@
   display: none;
 } 
         .dark-mode{
-          background-color: #202020;
+          background-color: darkgray;
           color: white;
         }
         
@@ -83,7 +83,7 @@
     <body>
       <div class="topnav" id="myTopnav">
   <a href="">Wordle</a>
-  <a href onclick="myFunction()">Dark Mode </a>
+        <a href onclick="myFunction()">Dark Mode </a>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">
     <i class="fa fa-bars"></i>
   </a>
@@ -100,16 +100,17 @@
           <li id = "rule3">The Letter is <span class = "not">NOT in The Word</span></li>
         </ul>
 <p>Guesses do not need to be real words, but need to be five letters. For more fun, go to <a class = "wordle" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a></p>
+ 
+
+        
+        
+        <form onsubmit = "return false;">
   <input type="text" id="Letter1" name="Letter1" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter2" name="Letter2" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter3" name="Letter3" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter4" name="Letter4" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter5" name="Letter5" maxlength="1" style="text-transform:uppercase">
         <br>
-
-        
-        
-        <form onsubmit = "return false;">
   <input type="submit" value="Submit">
   <input type ="reset" value = "Reset">
         
