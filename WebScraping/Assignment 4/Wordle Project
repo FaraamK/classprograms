@@ -113,7 +113,7 @@ a.wordle:hover, a.wordle:active {font-size: 110%;}
   <input type="text" id="Letter4" name="Letter4" maxlength="1" style="text-transform:uppercase">
   <input type="text" id="Letter5" name="Letter5" maxlength="1" style="text-transform:uppercase">
         <br>
-  <input type="submit" value="Submit" onclick = "submitted();">
+  <input type="submit" value="Submit">
   <input type ="reset" value = "Reset">
           <br>
   <button onclick="alertFunction()">I Give Up!</button>
@@ -147,12 +147,6 @@ a.wordle:hover, a.wordle:active {font-size: 110%;}
     
             document.write('</div>');
         }     
-    
-        function submitted(){
-          alert("done");
-        }
-  
-        
         document.write('<div class = "container keys m-5">');
   
   
@@ -179,6 +173,16 @@ btn.onclick = function () {
     targetDiv.style.display = "block";
   }
 };
+        
+for(let textBoxIteration = 0; textBoxIteration < word.length; textBoxIteration++)
+              {
+      if(word.indexOf($("#Letter"+ textBoxIteration).val().toUpperCase()) === -1)
+                  $("#Letter"+ textBoxIteration).css("backgroundColor","#787c7e");
+      else if($("#Letter" + textBoxIteration).val().toUpperCase() === word.substring(textBoxIteration,textBoxIteration + 1))
+                  $("#letter"+ textBoxIteration).css("backgroundColor","#6aaa64");
+      else if(word.indexOf($("#letter"+ textBoxIteration).val().toUpperCase()) !== -1)
+                  $("#Letter"+ textBoxIteration).css("backgroundColor","#c9b458");
+              }
         </script>
       <script>
       $(document).ready(function(){  
