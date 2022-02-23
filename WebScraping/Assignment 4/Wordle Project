@@ -107,11 +107,11 @@ a.wordle:hover, a.wordle:active {font-size: 110%;}
         
         
         <form onsubmit = "return false;">
-  <input type="text" id="Letter1" name="Letter1" maxlength="1" style="text-transform:uppercase" value = "">
-  <input type="text" id="Letter2" name="Letter2" maxlength="1" style="text-transform:uppercase">
-  <input type="text" id="Letter3" name="Letter3" maxlength="1" style="text-transform:uppercase">
-  <input type="text" id="Letter4" name="Letter4" maxlength="1" style="text-transform:uppercase">
-  <input type="text" id="Letter5" name="Letter5" maxlength="1" style="text-transform:uppercase">
+  <input type="text" id="Letter0"  maxlength="1" style="text-transform:uppercase">
+  <input type="text" id="Letter1"  maxlength="1" style="text-transform:uppercase">
+  <input type="text" id="Letter2"  maxlength="1" style="text-transform:uppercase">
+  <input type="text" id="Letter3"  maxlength="1" style="text-transform:uppercase">
+  <input type="text" id="Letter4"  maxlength="1" style="text-transform:uppercase">
         <br>
   <input type="submit" value="Submit">
   <input type ="reset" value = "Reset">
@@ -174,19 +174,37 @@ btn.onclick = function () {
   }
 };
         
-for(let textBoxIteration = 0; textBoxIteration < word.length; textBoxIteration++)
+
+        
+$("input[type = submit]").click(function(){
+          
+ if($("#Letter0").val().length > 0 && $("#Letter1").val().length > 0 && $("#Letter2").val().length > 0 &&
+           $("#Letter3").val().length > 0 && $("#Letter4").val().length > 0);
+          
+          for(let textBoxIteration = 0; textBoxIteration < ANSWER.length; textBoxIteration++)
               {
-      if(word.indexOf($("#Letter"+ textBoxIteration).val().toUpperCase()) === -1)
+      if(ANSWER.indexOf($("#Letter"+ textBoxIteration).val().toUpperCase()) === -1){
                   $("#Letter"+ textBoxIteration).css("backgroundColor","#787c7e");
-      else if($("#Letter" + textBoxIteration).val().toUpperCase() === word.substring(textBoxIteration,textBoxIteration + 1))
-                  $("#letter"+ textBoxIteration).css("backgroundColor","#6aaa64");
-      else if(word.indexOf($("#letter"+ textBoxIteration).val().toUpperCase()) !== -1)
+        $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#787c7e");
+      }
+      else if($("#Letter" + textBoxIteration).val().toUpperCase() === ANSWER.substring(textBoxIteration,textBoxIteration + 1)){
+                  $("#Letter"+ textBoxIteration).css("backgroundColor","#6aaa64");
+        $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#6aaa64");
+      }
+      else if(ANSWER.indexOf($("#Letter"+ textBoxIteration).val().toUpperCase()) !== -1){
                   $("#Letter"+ textBoxIteration).css("backgroundColor","#c9b458");
+        $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#c9b458");
+      }
               }
+        });
+        $("input[type = reset]").click(function(){
+        $("input[type=text], .keyboard-button").css("backgroundColor","white"); 
+        });
+                                        
         </script>
       <script>
       $(document).ready(function(){  
-        $(".keyboard-button").click(function()
+        $("").click(function()
     });
       </script>
     </body>
