@@ -94,13 +94,13 @@ a.wordle:hover, a.wordle:active {font-size: 110%;}
         
       <div class = "container m-5">
          
-          <h1> Wordle Project </h1>
-        <p> <b>Rules:</b> Guess the five letter word. After submitting a guess, the characters will be color coded as below. </p>
-        <ul>
-          <li id = "rule1">The Letter is in The <span class = "correct"> CORRECT  Position </span> </li>
-          <li id = "rule2">The Letter is in The <span class = "wrong"> WRONG Position</span></li>
-          <li id = "rule3">The Letter is <span class = "not">NOT in The Word</span></li>
-        </ul>
+<h1> Wordle Project </h1>
+ <p> <b>Rules:</b> Guess the five letter word. After submitting a guess, the characters will be color coded as below. </p>
+<ul>
+<li id = "rule1">The Letter is in The <span class = "correct"> CORRECT  Position </span> </li>
+<li id = "rule2">The Letter is in The <span class = "wrong"> WRONG Position</span></li>
+<li id = "rule3">The Letter is <span class = "not">NOT in The Word</span></li>
+</ul>
 <p>Guesses do not need to be real words, but need to be five letters. For more fun, go to <a class = "wordle" href="https://www.nytimes.com/games/wordle/index.html">Wordle</a></p>
  
 
@@ -179,27 +179,28 @@ btn.onclick = function () {
 $("input[type = submit]").click(function(){
           
  if($("#Letter0").val().length > 0 && $("#Letter1").val().length > 0 && $("#Letter2").val().length > 0 &&
-           $("#Letter3").val().length > 0 && $("#Letter4").val().length > 0);
-          
+           $("#Letter3").val().length > 0 && $("#Letter4").val().length > 0){
           for(let textBoxIteration = 0; textBoxIteration < ANSWER.length; textBoxIteration++)
-              {
-      if(ANSWER.indexOf($("#Letter"+ textBoxIteration).val().toUpperCase()) === -1){
-                  $("#Letter"+ textBoxIteration).css("backgroundColor","#787c7e");
-        $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#787c7e");
-      }
-      else if($("#Letter" + textBoxIteration).val().toUpperCase() === ANSWER.substring(textBoxIteration,textBoxIteration + 1)){
-                  $("#Letter"+ textBoxIteration).css("backgroundColor","#6aaa64");
-        $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#6aaa64");
-      }
-      else if(ANSWER.indexOf($("#Letter"+ textBoxIteration).val().toUpperCase()) !== -1){
-                  $("#Letter"+ textBoxIteration).css("backgroundColor","#c9b458");
-        $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#c9b458");
-      }
-              }
-        });
-        $("input[type = reset]").click(function(){
-        $("input[type=text], .keyboard-button").css("backgroundColor","white"); 
-        });
+          {
+             if(ANSWER.indexOf($("#Letter"+ textBoxIteration).val().toUpperCase()) === -1){
+                            $("#Letter"+ textBoxIteration).css("backgroundColor","#787c7e");
+                  $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#787c7e");
+                }
+             else if($("#Letter" + textBoxIteration).val().toUpperCase() === ANSWER.substring(textBoxIteration,textBoxIteration + 1)){
+                            $("#Letter"+ textBoxIteration).css("backgroundColor","#6aaa64");
+                  $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#6aaa64");
+                }
+              else if(ANSWER.indexOf($("#Letter"+ textBoxIteration).val().toUpperCase()) !== -1){
+                            $("#Letter"+ textBoxIteration).css("backgroundColor","#c9b458");
+                  $("#" + $("#Letter" + textBoxIteration).val().toUpperCase()).css("backgroundColor","#c9b458");
+                
+            }
+          }
+ }
+});
+    $("input[type = reset]").click(function(){
+    $("input[type=text], .keyboard-button").css("backgroundColor","white"); 
+    });
                                         
         </script>
       <script>
