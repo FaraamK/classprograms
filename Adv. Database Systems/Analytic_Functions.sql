@@ -5,9 +5,6 @@ FROM COURSE
 GROUP BY CDEPT, CNO, CNAME, CLABFEE
 ORDER BY CDEPT;
 
-/* code for problem one does present an output in the correct format, but the lab fee average does not print in the wanted way, 
-all CLABFEE should be totaled and averaged and should read 110 all the way down, work in progress */
-
 -- problem 2 
 
 SELECT CDEPT, CNO, CNAME, CLABFEE,
@@ -16,3 +13,14 @@ SELECT CDEPT, CNO, CNAME, CLABFEE,
         ORDER BY CDEPT) AS "AVG_LABFEE"
 FROM COURSE
 ORDER BY CDEPT;
+
+-- problem 3
+
+SELECT FNAME, FDEPT, FSALARY,
+    SUM(FSALARY) OVER 
+    (PARTITION BY FDEPT
+    ORDER BY FSALARY DESC) AS "DEPT_TOTAL"
+FROM FACULTY
+ORDER BY FDEPT;
+
+/* work in progress */
