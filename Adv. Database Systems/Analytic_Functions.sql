@@ -25,5 +25,4 @@ SELECT FNAME, FDEPT, FSALARY,
         ORDER BY FNAME) AS "EMP #"
 FROM FACULTY
 ORDER BY FDEPT, FNAME;
-
 /* work in progress */
