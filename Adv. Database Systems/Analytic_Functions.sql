@@ -26,3 +26,15 @@ SELECT FNAME, FDEPT, FSALARY,
 FROM FACULTY
 ORDER BY FDEPT, FNAME;
 /* work in progress */
+
+-- problem 4
+
+
+-- problem 5 
+
+SELECT * FROM (
+SELECT CDEPT, CNAME, CLABFEE,
+        RANK() OVER (PARTITION BY CDEPT
+                    ORDER BY CLABFEE DESC) AS "RANK"
+FROM COURSE)
+WHERE RANK <= 2
