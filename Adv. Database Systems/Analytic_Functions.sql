@@ -29,6 +29,13 @@ ORDER BY FDEPT, FNAME;
 
 -- problem 4
 
+SELECT CDEPT, CNAME, CLABFEE, 
+MAX(CLABFEE) OVER (PARTITION BY CDEPT 
+    ORDER BY CDEPT) AS "DEPT_MAX_FEE"
+FROM COURSE
+ORDER BY CDEPT;
+
+-- incomplete, must find difference between numbers 
 
 -- problem 5 
 
