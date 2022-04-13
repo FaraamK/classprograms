@@ -31,11 +31,13 @@ ORDER BY FDEPT, FNAME;
 
 SELECT CDEPT, CNAME, CLABFEE, 
 MAX(CLABFEE) OVER (PARTITION BY CDEPT 
-    ORDER BY CDEPT) AS "DEPT_MAX_FEE"
+    ORDER BY CDEPT) AS "DEPT_MAX_FEE",
+CLABFEE - MAX(CLABFEE) OVER (PARTITION BY CDEPT
+    ORDER BY CDEPT) AS "LAB_FEE_DIFFERENCE"
 FROM COURSE
 ORDER BY CDEPT;
 
--- incomplete, must find difference between numbers 
+-- error fixed, had to do another partition where max(clabfee) was subtracted from clabfee to get difference
 
 -- problem 5 
 
