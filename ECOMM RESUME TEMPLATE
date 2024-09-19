@@ -55,7 +55,7 @@
     </p>
     <p>
       <i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>
-      New York, USA
+      Connecticut, USA
     </p>
     <p>
       <i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i>
@@ -96,14 +96,34 @@
     </div>
     <div class="skill">
       <div>
+        <span>Java</span>
+      </div>
+      <div class="yearsOfExperience">
+        <span class="alignright">4</span>
+        <span class="alignleft">years</span>
+      </div>
+    </div>
+    <div class="skill">
+      <div>
+        <span>Python</span>
+      </div>
+      <div class="yearsOfExperience">
+        <span class="alignright">1</span>
+        <span class="alignleft">years</span>
+      </div>
+    </div>
+    <div class="skill">
+      <div>
         <span>Powerpoint</span>
       </div>
       <div class="yearsOfExperience">
         <span class="alignright">1</span>
         <span class="alignleft">year</span>
       </div>
+      
     </div>
   </div>
+  
     </div>
     <div class="item">
       <h2>
@@ -111,13 +131,13 @@
       </h2>
         <div class="smallText">
     <p class="bolded white">
-      Bachelor of Economics
+      Bachelor of Computer Science
     </p>
     <p>
-      The University of Sydney
+      Eastern Connecticut State University
     </p>
     <p>
-      2010 - 2014
+      2019 - 2024
     </p>
   </div>
     </div>
@@ -126,7 +146,7 @@
     <div class="rightPanel">
         <div>
     <h1>
-      Jhon Doe
+      Sean P. Shea
     </h1>
     <div class="smallText">
       <h3>
@@ -207,9 +227,7 @@
    </body>
 </html>
 
-
-
-<!-- CSS BELOW -->
+<!- CSS STARTS HERE!! ->
 
 .container {
   display: flex;
@@ -365,3 +383,4 @@ h3 {
 .projectName span {
   font-family: 'Source Sans Pro', sans-serif;
 }
+<!- END ->
